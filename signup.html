@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="JPG/PNG" href="photo/ryselogo.svg">
+    <title>Đăng kí tài khoản</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet"href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <header>
+      <a href="index.html"><img class="logo" id="logo" src="photo/ryselogo.svg" alt="logo picture"></a>
+        <div class="nav-bar" id="navigation">
+            <a href="index.html" class="navitem">Trang chủ</a>
+            <a href="signup.html" class="navitem">Đăng ký</a>
+            <a href="#" class="navitem">Giới thiệu</a>
+            <a href="#" class="navitem">Sitemap</a>
+            <a href="sanpham.html" class="navitem">Mua hàng</a>  
+            <a href="cart.html" class="navitem">
+              <i class="fa fa-shopping-cart" style="font-size:x-large;"></i> <span></span></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+    </header>
+
+    <main id="reg">
+        <h1 class="title" style="color: black;">Đăng kí tài khoản</h1>
+        <br>
+        <div class="form" id="make form">
+          <form id="registration">
+            <h2>Điền thông tin</h2>
+
+            <div class="form-row">
+              <div class="row px-5 pb-4">
+                <div class="col ">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="fname" placeholder="fname" name="fname">
+                    <label for="fname">Họ</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="lname" placeholder="lname" name="lname">
+                    <label for="lname">Tên</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="row px-5 pb-4">
+                <div class="col">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="tel" placeholder="tel" name="tel" pattern="[0]{1}[0-9]{9}">
+                    <label for="tel">SĐT(10 số)</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">Nam</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="flexRadioDefault2">Nữ</label> 
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                    <label class="form-check-label" for="flexRadioDefault2">Khác</label> 
+                  </div>
+                </div>
+              </div>
+            
+            <div class="form-row px-5 pb-4">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                <label for="email">Email</label>
+                <div class="valid-feedback">OK</div>
+                <div class="invalid-feedback">Hãy điền đúng định dạng email.</div>
+              </div>
+            </div>
+
+            <div class="form-row px-5 pb-4">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+                <label for="pwd">Mật khẩu</label>
+                
+              </div>
+            </div>
+
+            <div class="form-row px-5 pb-4">
+              <div class="form-check form-switch ">
+                <input class="form-check-input" type="checkbox" id="tbao" name="tbao" value="yes" checked>
+                <label class="form-check-lable" for="tbao">Nhận thông báo mới</label>
+              </div>
+            </div>
+
+            <div class="form-row px-5 pb-4">
+              <button type="submit" class="btn btn-primary btn-lg" aria-pressed="true" id="signup">Đăng ký</button>
+            </div>
+            <div class="form-check mb-3">
+
+            </div>
+          </form>
+        </div>
+    </main>
+
+    <footer>
+      <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="signup.html">Đăng ký  </a></li>
+          <li><a href="">Giới thiệu</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+          <li><a href="sanpham.html">Mua hàng</a></li>
+          
+      </ul>
+      <h3>Thông tin liên hệ</h3>
+      <p>Phone: 0865197690 </p>
+      <p>Email: thisisemail@gmail.com</p>
+      <ul>
+          <li class="Contact-foot"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+          <li class="Contact-foot"><a href="https://www.facebook.com/"><i class="	fa fa-facebook-square"></i></a></li>
+          <li class="Contact-foot"><a href="https://www.github.com/"><i class="fa fa-github"></i></a></li>
+          <li class="Contact-foot"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+
+      </ul>
+      
+      <hr>
+      <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
+  </footer>
+    <script src="script.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
