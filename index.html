@@ -6,7 +6,8 @@
     <link rel="icon" type="JPG/PNG" href="photo/ryselogo.svg">
     <title>Trang chủ | RYSE supplement</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">    
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">   
 </head>
 <body>
     <header>
@@ -14,26 +15,90 @@
         <div class="nav-bar" id="navigation">
             <a href="index.html" class="navitem">Trang chủ</a>
             <a href="signup.html" class="navitem">Đăng ký</a>
-            <a href="#" class="navitem">Giới thiệu</a>
-            <a href="#" class="navitem">Sitemap</a>
-            <a href="sanpham.html" class="navitem">Mua hàng</a>  
+            <a href="gioithieu.html" class="navitem">Giới thiệu</a>
+            <a href="sitemap.html" class="navitem">Sitemap</a>
+            <a href="sanpham.html" class="navitem">Mua hàng</a> 
             <a href="cart.html" class="navitem">
                 <i class="fa fa-shopping-cart" style="font-size:x-large;"></i> <span></span></a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
             </a>
-          </div>
+        </div>
     </header>
 
     <main>
         <h1 class="title">RYSE Supplements</h1>
         <h2 id="quote">Fuel Your Greatness</h2>
+        
+        
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+        
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+          </div>
+          
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="blackout.html"><img src="photo/more/front1.webp" alt="Product1" class="d-block" ></a>
+            </div>
+            <div class="carousel-item">
+                <a href="sanpham.html"><img src="photo/more/front2.webp" alt="Product2" class="d-block" ></a>
+              </div>
+            <div class="carousel-item ">
+              <a href="loadedpre.html"><img src="photo/more/front1.jpg" alt="product3" class="d-block"></a>
+            </div>
+            
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
 
-            <div class="newimg">
-                <img src="photo/new.png">
+        <h2 class="main-list">Sản phẩm hot</h2>
+        
+        <div class="product-container">
+            <div class="item index">
+                <a href="loadedpre.html" class="item-link">
+                    <img src="photo/loaded_pre.webp">
+                    <h3>Loaded Pre</h3>
+                    <h4>Sour Punch™ Blue Raz</h4>
+                    <h4>990.000đ</h4>
+                </a>
+            </div>
+            <div class="item index">
+                <a href="godzilla.html" class="item-link">
+                    <img src="photo/godzilla_pre.webp">
+                    <h3>Godzilla Pre-Workout</h3>
+                    <h4>Passion Pineapple</h4>
+                    <h4>1.400.000đ</h4>
+                </a>
             </div>
 
+            <div class="item index">
+                <a href="protein.html" class="item-link">
+                    <img src="photo/loaded_protein.webp">
+                    <h3>Loaded Protein</h3>
+                    <h4>Blueberry Muffin</h4>
+                    <h4>1.300.000đ</h4>
+                </a>
+            </div>
 
+            <div class="item index">
+                <a href="creatine.html" class="item-link">
+                    <img src="photo/loaded_creatine.webp">
+                    <h3>Loaded Creatine</h3>
+                    <h4>Baja Cooler</h4>
+                    <h4>990.000đ</h4>
+                </a>
+            </div>
+
+        </div>
     </main>
 
     <footer>
@@ -45,10 +110,10 @@
             <li class="Contact-foot"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
 
         </ul>
-        
         <hr>
         <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

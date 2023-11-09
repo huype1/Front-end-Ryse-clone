@@ -8,6 +8,7 @@ body {
 header {
     background-color: white;
     position: sticky;
+    z-index: 1;
     top: 0;
     padding: 0px 3px;
     
@@ -69,12 +70,13 @@ h1 {
 
 .product-container {
     display: grid;
-
     grid-auto-flow: row;
     row-gap: 25px;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 12px;
+    column-gap: 7px;
     padding: 30px 20px;
+    width: 96%;
+    margin: 0 auto;
 
 }
 .item {
@@ -90,6 +92,9 @@ h1 {
     text-decoration: none;
     color: slateblue;
     font-size: larger;
+}
+.item.index .item-link img:hover{
+    max-width: 102%;
 }
 .item-link img {
     background-color: lightgray;
@@ -115,7 +120,7 @@ h1 {
 
 .filter {
     margin: auto;
-    width: 96%;
+    width: 95%;
     padding: 10px 10px;
     
 }
@@ -151,7 +156,7 @@ h1 {
     color: white;
     text-decoration: none; 
     border-radius: 20px;
-    padding: 20px 10px;
+    padding: 20px 30px;
     font-weight: bolder;
 }
 .price {
@@ -397,7 +402,21 @@ h1 {
 
     background-color: lightskyblue;
 }
-
+.d-block {
+    width: 90%;
+    height: 65vh;
+    margin: 0 auto;
+}
+#demo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main-list {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
 footer ul{
     list-style-type: none;
     font-weight: bold;
@@ -507,7 +526,11 @@ footer p {
     .item-in {
         width: 99%;
     }
-    
+    .d-block {
+        width: 95%;
+        height: 25vh;
+        margin: 0 auto;
+    }
 }
     
 @media screen and (max-width: 768px) {
