@@ -27,7 +27,8 @@
  
     <main>
         <h1 class="title">Giỏ hàng</h1>
-        <div class="product-cart">
+        <div id="customer" style="text-align: center;"></div>
+            <div class="product-cart">
             <div class="product-header">
                 <h5 class="product-name">Sản phẩm</h5>
                 <h5 class="product-price">Giá</h5>
@@ -39,13 +40,13 @@
             <hr>
             <a href="#" onclick="removeall()" id="remove"> <i class="fa fa-window-close fa-lg" aria-hidden="true"></i> Xóa tất cả</a>
             
-
+            <p id="showpercent"></p>
             <div class="cartTotal"></div>
             <div class="sale">
                 <input type="text" name="discount" id="discount">
                 <a onclick="checkdiscount()" href="#" id="checksale">Kiểm tra</a>
-                
             </div>
+            
             <div id="thanhtoan"> <button onclick="cash()">Thanh toán</button></div>
            
             <div class="return-button">

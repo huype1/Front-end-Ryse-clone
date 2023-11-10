@@ -7,6 +7,36 @@ function myFunction() {
     x.className = "nav-bar";
   }
 }
+
+//kiểm tra form input 
+function checkvalid() {
+  let alert = document.getElementsByClassName('pwd-alert')[0];
+  let pass = document.forms["myform"]["pass"].value;
+  var regex = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*,.]{7,18}$/;
+  if (pass.match(regex)) {
+    let ten = document.getElementById("lname").value;
+    let ho = document.getElementById("fname").value;
+    let sdt = document.getElementById("tel").value;
+    localStorage.setItem("fullname", ho + ' ' + ten);
+    localStorage.setItem("tel", sdt);
+    window.alert("Khách hàng " + ten + " đăng ký tk thành công");
+    displayCart();
+    return true;
+  }
+  else {
+    
+    
+    alert.innerHTML = 
+    `<div class="alert alert-danger alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Mật khẩu cần ít nhất 6 ký tự và 1 chữ số</strong>
+    </div>`;
+    return false;
+    
+  }
+}
+
+//thanh toán
 function cash() {
   let cart = JSON.parse(localStorage.getItem("cartNumber"));
   if (cart) {
@@ -19,6 +49,7 @@ function cash() {
   }
   
 }
+//xóa tất cả
 function removeall() {
   document.querySelector(".item-in").innerHTML = ``;
   localStorage.removeItem("productInCart");
@@ -28,21 +59,25 @@ function removeall() {
   loadCart();
   
 }
+
+//kiểm tra mã giảm giá
 function checkdiscount() {
   let cost = Number(localStorage.getItem('total'));
-  
+  let sale = document.getElementById('showpercent');
   document.getElementById("checksale").addEventListener('click', () => {
     let x = document.getElementById("discount").value;
-    if(x.toUpperCase() === "DADDY") {
+    if(x.toUpperCase() === "DADDY" || x.toUpperCase() === "RODRIGO") {
       localStorage.setItem('total', cost - (cost*20/100));
       window.alert("App mã giảm giá thành công: giảm 20%");
+      sale.innerHTML = `Giảm 20% cho đơn hàng`;
       displayCart();
       document.getElementById("discount").style.display = "none";
       document.getElementById("checksale").style.display = "none";
     }
-    else if(x.toUpperCase() === "SEGAY") {
+    else if(x.toUpperCase() === "SEGAY" || x.toUpperCase() === "1989") {
       localStorage.setItem('total', cost - (cost*10/100));
       window.alert("App mã giảm giá thành công: giảm 10%");
+      sale.innerHTML = `Giảm 10% cho đơn hàng`;
       displayCart();
       document.getElementById("discount").style.display = "none";
       document.getElementById("checksale").style.display = "none";
@@ -94,11 +129,14 @@ function decrease(name) {
 }
 //hiển thị giỏ hàng và tổng tiền sau khi thêm sản phẩm
 function displayCart() {
+  let customer = localStorage.getItem("fullname");
+  let tel = localStorage.getItem("tel");
   let cartItems = localStorage.getItem("productInCart");
   cartItems = JSON.parse(cartItems);
   let productContainer = document.querySelector(".item-in");
   let cashout = document.querySelector(".cartTotal");
   let cost = localStorage.getItem('total');
+  let displayname = document.querySelector("#customer");
   let final = Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(cost);
   if (cartItems && productContainer) {
     productContainer.innerHTML = '';
@@ -107,7 +145,7 @@ function displayCart() {
         productContainer.innerHTML += `
         <div class="item-in">
           
-          <div class="product-name" style="padding= 50px 100px;">
+          <div class="product-name">
               <img src="./photo/${item.img}" class="cart-img">
               <span> ${item.name} </span> 
           </div>
@@ -136,10 +174,13 @@ function displayCart() {
 
       `
   }
+  if(customer) {
+    displayname.innerHTML = `Khách hàng:  ${customer} <br> SĐT: ${tel}`;
+  }
   
 }
 
-//thêm vào giỏ hàng
+//nút thêm vào giỏ hàng của các sản phẩm
 let carts = document.querySelectorAll('.add-cart');
 
 //chuyển data để gán dữ liệu khi thêm giỏ hàng
@@ -200,24 +241,27 @@ let products = [
     inCart: 0,
     img: "pump_powder.webp",
   },
-]
+];
+
 //addEventListener cho từng nút thêm
 carts.forEach(item => {
   item.addEventListener("click", () => {
+    //gán id sản phẩm bằng index của object
     const id = item.id;
-
     cartNumber(products[id]);  //thêm vào giỏ hàng
     total(products[id]);  //tính tổng tiền
   });
 });
 
 
-function loadCart() { //dung khi reset trang de khong mat so san pham da them
+function loadCart() { //nếu có sản phẩm trong giỏ thì luôn hiển thị trong navbar
   let productNumbers = localStorage.getItem('cartNumber');
   if (productNumbers) {
     document.querySelector('.navitem span').innerHTML = productNumbers;
   }
 }
+
+//thêm số lượng sản phẩm vào navbar
 function cartNumber(product) {
 
   let productNumbers = localStorage.getItem('cartNumber');
@@ -234,6 +278,7 @@ function cartNumber(product) {
   setItems(product);
 }
 
+//lưu sản phẩm vào local sotrage
 function setItems(product) {
   let cartItems = localStorage.getItem('productInCart');
   cartItems = JSON.parse(cartItems);  //JS to JSON
@@ -241,7 +286,7 @@ function setItems(product) {
     if (cartItems[product.tag] == undefined) {
       cartItems = {
         ...cartItems, //luu lai nhung du lieu cu
-        [product.tag]: product //tao item js moi
+        [product.tag]: product //tao object js moi
       }
     }
     cartItems[product.tag].inCart += 1; 
@@ -254,11 +299,12 @@ function setItems(product) {
   }
 
 
-  localStorage.setItem("productInCart", JSON.stringify(cartItems)); //JSON to JS
+  localStorage.setItem("productInCart", JSON.stringify(cartItems)); //thêm sp là js object ở định dạng json
 }
 
+
 function total(product) {
-  //tinh hoa don va luu vao local storage
+  //tính tổng tiền và lưu
   let cost = localStorage.getItem('total');
   
 
@@ -267,14 +313,14 @@ function total(product) {
     localStorage.setItem('total', cost + product.price);
   }
   else {
-  
-  localStorage.setItem('total', product.price);
+    localStorage.setItem('total', product.price);
   }
 }
 
 
 loadCart();
 displayCart();
+//hàm hiển thị và lad
 
 
 

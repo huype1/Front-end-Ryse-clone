@@ -1,119 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="JPG/PNG" href="photo/ryselogo.svg">
-    <title>Trang chủ | RYSE supplement</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="JPG/PNG" href="photo/ryselogo.svg">
+  <title>Trang chủ | RYSE supplement</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img class="logo" id="logo" src="photo/ryselogo.svg" alt="logo picture"></a>
-        <div class="nav-bar" id="navigation">
-            <a href="index.html" class="navitem">Trang chủ</a>
-            <a href="signup.html" class="navitem">Đăng ký</a>
-            <a href="gioithieu.html" class="navitem">Giới thiệu</a>
-            <a href="sitemap.html" class="navitem">Sitemap</a>
-            <a href="sanpham.html" class="navitem">Mua hàng</a> 
-            <a href="cart.html" class="navitem">
-                <i class="fa fa-shopping-cart" style="font-size:x-large;"></i> <span></span></a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </header>
+  <header>
+    <a href="index.html"><img class="logo" id="logo" src="photo/ryselogo.svg" alt="logo picture"></a>
+    <div class="nav-bar" id="navigation">
+      <a href="index.html" class="navitem">Trang chủ</a>
+      <a href="signup.html" class="navitem">Đăng ký</a>
+      <a href="gioithieu.html" class="navitem">Giới thiệu</a>
+      <a href="sitemap.html" class="navitem">Sitemap</a>
+      <a href="sanpham.html" class="navitem">Mua hàng</a>
+      <a href="cart.html" class="navitem">
+        <i class="fa fa-shopping-cart" style="font-size:x-large;"></i> <span></span></a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </header>
 
-    <main>
-        <h1 class="title">RYSE Supplements</h1>
-        <h2 id="quote">Fuel Your Greatness</h2>
-        
-        
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-        
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  <main>
+    <h1 class="title" style="font-size: xxx-large;">RYSE Supplements</h1>
+    <h2 id="quote">Fuel Your Greatness</h2>
+
+
+    <div id="slide" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#slide" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#slide" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <a href="blackout.html"><img src="photo/more/front1.webp" alt="Product2" class="d-block"></a>
+        </div>
+        <div class="carousel-item ">
+          <a href="sanpham.html"><img src="photo/more/front2.webp" alt="Product1" class="d-block"></a>
+        </div>
+        <div class="carousel-item ">
+          <a href="loadedpre.html"><img src="photo/more/front3.webp" alt="product3" class="d-block"></a>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <h2 class="main-list" id="sp">Sản phẩm hot</h2>
+
+    <div class="product-container">
+      <div class="item index">
+        <a href="loadedpre.html" class="item-link">
+          <img src="photo/loaded_pre.webp">
+          <h3>Loaded Pre</h3>
+          <h4>Sour Punch™ Blue Raz</h4>
+          <h4>990.000đ</h4>
+        </a>
+      </div>
+      <div class="item index">
+        <a href="godzilla.html" class="item-link">
+          <img src="photo/godzilla_pre.webp">
+          <h3>Godzilla Pre-Workout</h3>
+          <h4>Passion Pineapple</h4>
+          <h4>1.400.000đ</h4>
+        </a>
+      </div>
+
+      <div class="item index">
+        <a href="protein.html" class="item-link">
+          <img src="photo/loaded_protein.webp">
+          <h3>Loaded Protein</h3>
+          <h4>Blueberry Muffin</h4>
+          <h4>1.300.000đ</h4>
+        </a>
+      </div>
+
+      <div class="item index">
+        <a href="creatine.html" class="item-link">
+          <img src="photo/loaded_creatine.webp">
+          <h3>Loaded Creatine</h3>
+          <h4>Baja Cooler</h4>
+          <h4>990.000đ</h4>
+        </a>
+      </div>
+
+    </div>
+
+    <a href="sanpham.html" class="areavideo" style="position: relative;">
+      <video id="video" autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+        <source src="photo/more/indexvid.mp4" data-wf-ignore="true">
+      </video>
+      <div class="vid-ov"></div>
+      <div class="block-bot" style="position: absolute; bottom: 0; right: 0;">
+        <h2 class="h2-video">Trải nghiệm RYSE&nbsp;</h2>
+        <p>Tiếp năng lượng vượt thử thách</p>
+      </div>
+    </a>
+
+    <div class="inspost">
+      <h2>Latest post</h2>
+      <iframe src="https://www.instagram.com/p/CzKcrnkx19V/embed" frameborder="0"></iframe>
+    </div>
+
+
+    <div class="loginindex">
+      <p style="font-size: xxx-large; text-align: center;">Đăng nhập</p>
+      <div class="login" id="makeform">
+        <form id="login" onsubmit="return checkvalid()" name="myform">
+
+          <div class="form-row px-5 pb-4 pt-5">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+              <label for="email">Email</label>
+              <div class="valid-feedback">OK</div>
+              <div class="invalid-feedback">Hãy điền đúng định dạng email.</div>
+            </div>
           </div>
-          
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="blackout.html"><img src="photo/more/front1.webp" alt="Product1" class="d-block" ></a>
+
+          <div class="form-row px-5 pb-4">
+            <div class="form-floating">
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+              <label for="pwd">Mật khẩu</label>
             </div>
-            <div class="carousel-item">
-                <a href="sanpham.html"><img src="photo/more/front2.webp" alt="Product2" class="d-block" ></a>
-              </div>
-            <div class="carousel-item ">
-              <a href="loadedpre.html"><img src="photo/more/front1.jpg" alt="product3" class="d-block"></a>
-            </div>
-            
           </div>
-          
-          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
 
-        <h2 class="main-list">Sản phẩm hot</h2>
-        
-        <div class="product-container">
-            <div class="item index">
-                <a href="loadedpre.html" class="item-link">
-                    <img src="photo/loaded_pre.webp">
-                    <h3>Loaded Pre</h3>
-                    <h4>Sour Punch™ Blue Raz</h4>
-                    <h4>990.000đ</h4>
-                </a>
+          <div class="pwd-alert"></div>
+
+          <div class="form-row px-5 pb-4">
+            <div class="form-check form-switch ">
+              <input class="form-check-input" type="checkbox" id="tbao" name="remember" value="yes" checked>
+              <label class="form-check-lable" for="tbao">Ghi nhớ tài khoản</label>
             </div>
-            <div class="item index">
-                <a href="godzilla.html" class="item-link">
-                    <img src="photo/godzilla_pre.webp">
-                    <h3>Godzilla Pre-Workout</h3>
-                    <h4>Passion Pineapple</h4>
-                    <h4>1.400.000đ</h4>
-                </a>
-            </div>
+          </div>
 
-            <div class="item index">
-                <a href="protein.html" class="item-link">
-                    <img src="photo/loaded_protein.webp">
-                    <h3>Loaded Protein</h3>
-                    <h4>Blueberry Muffin</h4>
-                    <h4>1.300.000đ</h4>
-                </a>
-            </div>
+          <div class="form-row px-5 pb-4">
+            <button type="submit" class="btn btn-primary btn-lg" aria-pressed="true" id="signup">Đăng ký</button>
+          </div>
+          <div class="form-check mb-3">
 
-            <div class="item index">
-                <a href="creatine.html" class="item-link">
-                    <img src="photo/loaded_creatine.webp">
-                    <h3>Loaded Creatine</h3>
-                    <h4>Baja Cooler</h4>
-                    <h4>990.000đ</h4>
-                </a>
-            </div>
+          </div>
+        </form>
+      </div>
 
-        </div>
-    </main>
+    </div>
 
-    <footer>
-        <h3>Liên hệ</h3>
-        <ul>
-            <li class="Contact-foot"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
-            <li class="Contact-foot"><a href="https://www.facebook.com/"><i class="	fa fa-facebook-square"></i></a></li>
-            <li class="Contact-foot"><a href="https://www.github.com/"><i class="fa fa-github"></i></a></li>
-            <li class="Contact-foot"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+  </main>
 
-        </ul>
-        <hr>
-        <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+  <footer>
+    <h3>Liên hệ</h3>
+    <ul>
+      <li class="Contact-foot"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+      <li class="Contact-foot"><a href="https://www.facebook.com/"><i class="	fa fa-facebook-square"></i></a></li>
+      <li class="Contact-foot"><a href="https://www.github.com/"><i class="fa fa-github"></i></a></li>
+      <li class="Contact-foot"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
+
+    </ul>
+    <hr>
+    <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
