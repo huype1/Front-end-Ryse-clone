@@ -134,5 +134,55 @@
         <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+    <script>//nút lọc sản phẩm
+        var buttonpre = document.getElementById('fpre');
+        var divspre = document.querySelectorAll('.pre');
+        var buttonpro = document.getElementById('fpro');
+        var divspro = document.querySelectorAll('.pro');
+        var buttonsupp = document.getElementById('fsupp');
+        var divssupp = document.querySelectorAll('.supp');
+        
+        
+        buttonpre.addEventListener('click', function () {
+          if (divspre[0].style.display === 'none') {
+            divspre.forEach(function (div) {
+              div.style.display = 'block';
+              buttonpre.style.backgroundColor = 'grey';
+            });
+          }
+          else
+            divspre.forEach(function (div) {
+              div.style.display = 'none';
+              buttonpre.style.backgroundColor = 'white';
+            });
+        });
+        
+        buttonpro.addEventListener('click', function () {
+          if (divspro[0].style.display === 'none') {
+            divspro.forEach(function (div) {
+              div.style.display = 'block';
+              buttonpro.style.backgroundColor = 'grey';
+            });
+          }
+          else
+            divspro.forEach(function (div) {
+              div.style.display = 'none';
+              buttonpro.style.backgroundColor = 'white';
+            });
+        });
+        
+        buttonsupp.addEventListener('click', function () {
+          if (divssupp[0].style.display === 'none') {
+            divssupp.forEach(function (div) {
+              div.style.display = 'block';
+              buttonsupp.style.backgroundColor = 'grey';
+            });
+          }
+          else
+            divssupp.forEach(function (div) {
+              div.style.display = 'none';
+              buttonsupp.style.backgroundColor = 'white';
+            });
+        });</script>
 </body>
 </html>

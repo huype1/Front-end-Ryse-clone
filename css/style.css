@@ -27,8 +27,6 @@ header {
     overflow: hidden;
     background-color: black;
     border-radius: 4px;
-    padding: 2px 2px;
-
 }
 
 .nav-bar a {
@@ -37,7 +35,7 @@ header {
     color: white;
     font-weight: bolder;
     text-align: center;
-    padding: 15px 70px;
+    padding: 15px 80px;
     text-decoration: none;
     font-size: 20px;
     border-radius: 10px;
@@ -142,6 +140,7 @@ h1 {
     background-image: url('https://i.pinimg.com/originals/4b/f5/29/4bf5297d2589e3c9f8bb46f131c93400.jpg');
     padding: 40px 0px;
     background-size: cover;
+    background-position: fixed;
     background-repeat: no-repeat;
 
 
@@ -158,6 +157,10 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
     margin-bottom: 100px;
+}
+
+.login {
+    border: 1px solid black;
 }
 
 .login {
@@ -252,15 +255,20 @@ h1 {
     font-weight: bold;
 }
 
-.abt {
+.abt, #sinhvien {
     display: flex;
     flex-wrap: wrap;
     background-color: lightgray;
     width: 98%;
     margin: 0 auto;
+    
+}
+#sinhvien {
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
-.abt img {
+.abt img, #sinhvien img {
     width: 100px;
     height: auto;
     flex: 1 1 30%;
@@ -282,8 +290,7 @@ h1 {
     margin: 0 auto;
     padding-top: 50px;
 }
-
-.quality .wow {
+ .wow {
     flex: 1 1 32%;
     padding: 0px 2px;
     text-align: center;
@@ -462,7 +469,7 @@ h1 {
 }
 
 .d-block {
-    width: 94%;
+    width: 90%;
     height: 75vh;
     margin: 0 auto;
 }
@@ -481,6 +488,7 @@ h1 {
 
 #video {
     width: 90%;
+    height: auto;
     display: block;
     margin: 0 auto;
 
@@ -488,6 +496,7 @@ h1 {
 
 .areavideo {
     width: 100%;
+    height: min-content;
     margin: 0 auto;
     display: block;
     position: relative;
@@ -524,30 +533,146 @@ h1 {
     top: auto;
     font-size: clamp(0.75rem, 2vw, 3rem);
 }
-.inspost {
+
+#inspost {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
+    padding-top: 20px;
+
 }
-.inspost iframe {
+
+#inspost iframe {
     width: 500px;
     height: 700px;
 }
-.list-group {
-    text-align: center;
-    padding: 10px 0px;
+
+#lul {
+    background-image: url("https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg");
     
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+}
+
+#sitemap {
+    padding-top: 40px;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.list-group {
+    text-align: left;
+    padding: 10px 0px;
+    font-size: large;
+
 }
 
 .list-group a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight:600;
 
 }
 
+.list-group a:hover {
+    color: gray;
+}
+
+.list-group li {
+    background-color:dodgerblue;
+    padding: 20px 20px;
+}
+
+.list-group-item.lv2 {
+    background-color:blueviolet;
+    text-align: left;
+    margin-left: 40px;
+}
+
+.list-group-item.lv2 a {
+    color: white;
+}
+
+.list-group-item.lv2 a:hover {
+    color: gray;
+}
+
+.tab {
+    overflow: hidden;
+    padding-right: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+.tab button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;   
+    border-radius: 20px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: gray;
+    border: 2px solid black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    border-top: none;
+    background-color: lightgray;
+    background-image: url('https://assets.website-files.com/5e29c211b7c9a8c5af738c09/5e679edf592da77cedfb160a_logo.svg');
+
+}
+.tabcontent img{
+    flex: 1 1 30%;
+    width: 350px;
+    height: 300px;
+}
+.tabcontent .intro {
+    flex: 1 1 60%;
+    padding-left: 15px;
+    text-align: center;
+    font-size: large;
+}
+#promise {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+}
+.last {
+    flex: 1 1 100%;
+}
+.fat {
+    padding-bottom: 10px;
+    padding-top: 8px;
+}
+#gtsp {
+    color: white;
+    background-color: black;
+    border: 0px;
+}
 footer ul {
     list-style-type: none;
     font-weight: bold;
@@ -655,7 +780,7 @@ footer p {
         padding: 10px 50px;
     }
 
-    .abt img {
+    .abt img, #sinhvien img {
 
         height: auto;
         flex: 1 1 100%;
@@ -686,12 +811,26 @@ footer p {
     .item-in {
         width: 99%;
     }
+
     .block-bot {
         padding-bottom: 30px;
     }
-    .inspost iframe {
+
+    #inspost iframe {
         width: 280px;
         height: 500px;
+    }
+
+    #sitemap {
+        width: 90%;
+    }
+    .tabcontent img{
+        flex: 1 1 90%;
+        width: 200px;
+    }
+    .tabcontent .intro {
+        flex: 1 1 90%;
+        padding-top: 15px;
     }
 }
 
@@ -716,7 +855,7 @@ footer p {
 @media screen and (max-width: 1100px) {
     .d-block {
         width: 94%;
-        height: 30vh;
+        height: 25vh;
         margin: 0 auto;
     }
 }
