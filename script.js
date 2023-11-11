@@ -1,40 +1,3 @@
-//thanh navigation
-function myFunction() {
-  var x = document.getElementById("navigation");
-  if (x.className === "nav-bar") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav-bar";
-  }
-}
-
-//kiểm tra form input 
-function checkvalid() {
-  let alert = document.getElementsByClassName('pwd-alert')[0];
-  let pass = document.forms["myform"]["pass"].value;
-  var regex = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*,.]{7,18}$/;
-  if (pass.match(regex)) {
-    let ten = document.getElementById("lname").value;
-    let ho = document.getElementById("fname").value;
-    let sdt = document.getElementById("tel").value;
-    localStorage.setItem("fullname", ho + ' ' + ten);
-    localStorage.setItem("tel", sdt);
-    window.alert("Khách hàng " + ten + " đăng ký tk thành công");
-    displayCart();
-    return true;
-  }
-  else {
-    
-    
-    alert.innerHTML = 
-    `<div class="alert alert-danger alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <strong>Mật khẩu cần ít nhất 6 ký tự và 1 chữ số</strong>
-    </div>`;
-    return false;
-    
-  }
-}
 
 //thanh toán
 function cash() {
@@ -143,7 +106,6 @@ function displayCart() {
     Object.values(cartItems).map(item => {
         
         productContainer.innerHTML += `
-        <div class="item-in">
           
           <div class="product-name">
               <img src="./photo/${item.img}" class="cart-img">
@@ -162,7 +124,6 @@ function displayCart() {
               ${Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.inCart * item.price)}
           </div>
             
-        </div>
         `
   });
   } 
@@ -179,7 +140,7 @@ function displayCart() {
   }
   
 }
-
+//addcart 
 //nút thêm vào giỏ hàng của các sản phẩm
 let carts = document.querySelectorAll('.add-cart');
 
@@ -320,58 +281,64 @@ function total(product) {
 
 loadCart();
 displayCart();
-//hàm hiển thị và lad
+//hàm hiển thị và load số sản phẩm
 
 
 
-//nút lọc sản phẩm
-var buttonpre = document.getElementById('fpre');
-var divspre = document.querySelectorAll('.pre');
-var buttonpro = document.getElementById('fpro');
-var divspro = document.querySelectorAll('.pro');
-var buttonsupp = document.getElementById('fsupp');
-var divssupp = document.querySelectorAll('.supp');
-
-
-buttonpre.addEventListener('click', function () {
-  if (divspre[0].style.display === 'none') {
-    divspre.forEach(function (div) {
-      div.style.display = 'block';
-      buttonpre.style.backgroundColor = 'grey';
-    });
+//thanh navigation
+function myFunction() {
+  var x = document.getElementById("navigation");
+  if (x.className === "nav-bar") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav-bar";
   }
-  else
-    divspre.forEach(function (div) {
-      div.style.display = 'none';
-      buttonpre.style.backgroundColor = 'white';
-    });
-});
+}
 
-buttonpro.addEventListener('click', function () {
-  if (divspro[0].style.display === 'none') {
-    divspro.forEach(function (div) {
-      div.style.display = 'block';
-      buttonpro.style.backgroundColor = 'grey';
-    });
-  }
-  else
-    divspro.forEach(function (div) {
-      div.style.display = 'none';
-      buttonpro.style.backgroundColor = 'white';
-    });
-});
 
-buttonsupp.addEventListener('click', function () {
-  if (divssupp[0].style.display === 'none') {
-    divssupp.forEach(function (div) {
-      div.style.display = 'block';
-      buttonsupp.style.backgroundColor = 'grey';
-    });
+
+//tab giới thiệu
+function changetabs(evt, year) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
   }
-  else
-    divssupp.forEach(function (div) {
-      div.style.display = 'none';
-      buttonsupp.style.backgroundColor = 'white';
-    });
-});
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(year).style.display = "flex";
+  evt.currentTarget.className += " active";
+}
+
+
+
+//kiểm tra form input 
+function checkvalid() {
+  let alert = document.getElementsByClassName('pwd-alert')[0];
+  let pass = document.forms["myform"]["pass"].value;
+  var regex = /^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*,.]{7,18}$/;
+  if (pass.match(regex)) {
+    let ten = document.getElementById("lname").value;
+    let ho = document.getElementById("fname").value;
+    let sdt = document.getElementById("tel").value;
+    localStorage.setItem("fullname", ho + ' ' + ten);
+    localStorage.setItem("tel", sdt);
+    window.alert("Khách hàng " + ten + " đăng ký tk thành công");
+    displayCart();
+    return true;
+  }
+  else {
+    
+    alert.innerHTML = 
+    `<div class="alert alert-danger alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Mật khẩu cần ít nhất 6 ký tự và 1 chữ số</strong>
+    </div>`;
+    return false;
+    
+  }
+}
 

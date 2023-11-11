@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="JPG/PNG" href="photo/ryselogo.svg">
     <title>Giới thiệu | RYSE Supplements</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">  
-    <link rel="stylesheet"href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
 </head>
+
 <body>
     <header>
         <a href="index.html"><img class="logo" id="logo" src="photo/ryselogo.svg" alt="logo picture"></a>
@@ -17,53 +19,163 @@
             <a href="signup.html" class="navitem">Đăng ký</a>
             <a href="gioithieu.html" class="navitem">Giới thiệu</a>
             <a href="sitemap.html" class="navitem">Sitemap</a>
-            <a href="sanpham.html" class="navitem">Mua hàng</a> 
+            <a href="sanpham.html" class="navitem">Mua hàng</a>
             <a href="cart.html" class="navitem">
                 <i class="fa fa-shopping-cart" style="font-size:x-large;"></i> <span></span></a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+                <i class="fa fa-bars"></i>
             </a>
         </div>
     </header>
- 
-    <main>
-        <h1 class="title">Về chúng tôi</h1>
 
+    <main>
+        <h1 class="title">Về sinh viên</h1>
+        <div id="sinhvien">
+            <img src="photo/more/me.jpg">
+            <div class="bs">
+            <p>Tên: Hoàng Quốc Huy</p>
+            <p>Lớp: Khoa học máy tính 64 | NEU</p>
+            <p>Ngày sinh: 20/11/2004</p>
+            <p>Giới thiệu qua về bản thân: Một sinh viên không có nhiều đặc điểm nổi trội và không có nhiều tài năng.<br> Tuy nhiên có một số điểm mạnh như lười biếng, nói nhiều và có những giấc mơ hão huyền.</p>
+            <p>Mục tiêu: Giàu có, giỏi hơn, chăm chỉ hơn</p>
+            <p>Thành tích cá nhân: Không</p>
+            </div>
+        </div>
+        <h1 class="title">Về công ty</h1>
+
+        <a href="#story" class="areavideo" style="position: relative;" id="video">
+            <video id="video" autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="photo/more/indexvid.mp4" data-wf-ignore="true">
+            </video>
+            <div class="vid-ov"></div>
+            <div class="block-bot" style="position: absolute; bottom: 0; right: 0;">
+                <h2 class="h2-video">RYSE</h2>
+                <p>Tiếp sức cho những người vĩ đại</p>
+                <p>Since 2017</p>
+            </div>
+        </a>
         <div class="row pt-5 px-5 py-5">
             <div class=".col-sm-12 col-md-6 px-5">
-                <h2 style="text-align: center;">The Story Of <br>RYSE</h2>
+                <h2 style="text-align: center;" id="story">The Story Of <br>RYSE</h2>
                 <p>
-                    RYSE ban đầu chỉ là một ý tưởng, một giấc mơ. Nhưng không chỉ vậy, Sự thành công trong cuộc sống, cũng 
-                    
-                    
-                    
-                    như trong phòng tập, bắt đầu bằng việc chiến thắng trong những cuộc chiến nhỏ, chiến đấu hàng ngày. Chúng ta đều có những giấc mơ, dự định, mục tiêu nhưng hãy nghĩ xem bạn đang làm gì hàng ngày để đạt được những điều ấy? Chúng tôi không phải là đạt được thành công trong một đêm, và việc nó trở thành một công ty bán thực phẩm thể hình hàng đầu không phải là do may mắn.
+                    RYSE ban đầu chỉ là một ý tưởng, một giấc mơ. Nhưng không chỉ vậy, Sự thành công trong cuộc sống,
+                    cũng
+                    như trong phòng tập, bắt đầu bằng việc chiến thắng trong những cuộc chiến nhỏ, chiến đấu hàng ngày.
+                    Chúng ta đều có những giấc mơ, dự định, mục tiêu nhưng hãy nghĩ xem bạn đang làm gì hàng ngày để đạt
+                    được những điều ấy? Chúng tôi không phải là đạt được thành công trong một đêm, và việc nó trở thành
+                    một công ty bán thực phẩm thể hình hàng đầu không phải là do may mắn.
                 </p>
                 <p>
-                    Công ty của chúng tôi đang hàng ngày cố gắng truyền tải thông điệp để tạo động lực cho sự vĩ đại của mỗi người . Chúng tôi muốn trở thành một phần trong câu chuyện thành công của bạn, và giúp giấc mơ của bạn trở thành hiện thực.
-                </p>   
+                    Công ty của chúng tôi đang hàng ngày cố gắng truyền tải thông điệp để tạo động lực cho sự vĩ đại của
+                    mỗi người . Chúng tôi muốn trở thành một phần trong câu chuyện thành công của bạn, và giúp giấc mơ
+                    của bạn trở thành hiện thực.
+                </p>
             </div>
-            <div class=".col-sm-12 col-md-6 px-5 py-5">
+            <div class=".col-sm-12 col-md-6 px-5 py-0">
+                <h2 style="text-align: center;">Mục tiêu</h2>
                 <p>
-                    Ở RYSE, nhiệm vụ của chúng tôi là tạo động lực cho câu chuyện vĩ đại của bạn, dù chặng đường có gập ghềnh, dài và nhiều thử thách để vươn tới chiến thắng. Chúng tôi luôn mong muốn trong 1 ngày nào đó bạn sẽ trở thành phiên bản tốt nhất của chính mình. Để trở nên như vậy không hề dễ dàng. Không gì vĩ đại mà dễ dàng cả. Nhưng có một điều chắc chắn: Những kết quả tốt nhất đều sinh ra từ những thử thách khó khăn nhất.
+                    Ở RYSE, nhiệm vụ của chúng tôi là tạo động lực cho câu chuyện vĩ đại của bạn, dù chặng đường có gập
+                    ghềnh, dài và nhiều thử thách để vươn tới chiến thắng. Chúng tôi luôn mong muốn trong 1 ngày nào đó
+                    bạn sẽ trở thành phiên bản tốt nhất của chính mình. Để trở nên như vậy không hề dễ dàng. Không gì vĩ
+                    đại mà dễ dàng cả. Nhưng có một điều chắc chắn: Những kết quả tốt nhất đều sinh ra từ những thử
+                    thách khó khăn nhất.
                 </p>
                 <p>
-                   Chúng tôi muốn giúp đỡ những chiến binh, những kẻ không bao giờ nói không. Chúng tôi muốn giúp đỡ những con người chăm chỉ, độc lập: Cho những người muốn vượt trên cả kỳ vọng của họ. Chúng tôi muốn tiếp lửa cho câu chuyện của bạn , và chúng tôi luôn ở đằng sau thúc đẩy bạn bằng những sản phẩm nguyên chất, mạnh mẽ và hiệu quả. Chúng tôi không bán thuốc tiên;chúng tôi chỉ hỗ trợ bạn hết sức có thể trong cuộc hành chình của chính mình.
+                    Chúng tôi muốn giúp đỡ những chiến binh, những kẻ không bao giờ nói không. Chúng tôi muốn giúp đỡ
+                    những con người chăm chỉ, độc lập: Cho những người muốn vượt trên cả kỳ vọng của họ. Chúng tôi muốn
+                    tiếp lửa cho câu chuyện của bạn , và chúng tôi luôn ở đằng sau thúc đẩy bạn bằng những sản phẩm
+                    nguyên chất, mạnh mẽ và hiệu quả. Chúng tôi không bán thuốc tiên;chúng tôi chỉ hỗ trợ bạn hết sức có
+                    thể trong cuộc hành trình của chính mình.
                 </p>
                 <i style="float: right;">- Nic Stella, CEO & Founder</i>
             </div>
         </div>
+        <h1 class="title">Những dấu mốc ấn tượng</h1>
+        <div class="tab">
+            <button class="tablinks active"  onclick="changetabs(event, '2023')">2023</button>
+            <button class="tablinks" onclick="changetabs(event, '2021')">2021</button>
+            <button class="tablinks" onclick="changetabs(event, '2020')">2020</button>
+            <button class="tablinks" onclick="changetabs(event, '2018')">2018</button>
+            <button class="tablinks" onclick="changetabs(event, '2017')">2017</button>
+        </div>
+
+        <div id="2023" class="tabcontent" style="display: flex;">
+            <img src="https://assets.website-files.com/5e29c211b7c9a8c5af738c09/64f7e2ad0a17722929f6f3e8_RYSE-story_0003-p-800.webp">
+            <div class="intro">
+                <p>Taking the industry by storm launching iconic licenses such as Skippy Loaded Protein, Country Time™ Pre-Workout as well as new products like Loaded Creatine, Pump Daddy, Stim-Daddy and many new flavors of existing products.
+                </p>
+                <p>Expanding nationwide domination by launching into GNC with exclusive products and energy drinks. Accomplishing these tasks all while gaining more national distribution as well as expanding the assortment in Walmart. Supporting all of this with UFC Champion, Sean O'Malley, and becoming The Official Energy Drink of the Buffalo Sabres.
+                </p>
+                <p>Taking the industry by storm launching iconic licenses such as Skippy Loaded Protein, Country Time™ Pre-Workout as well as new products like Loaded Creatine, Pump Daddy, Stim-Daddy and many new flavors of existing products.</p>
+            </div>
+            
+        </div>
+
+        <div id="2021" class="tabcontent">
+            <img src="https://assets.website-files.com/5e29c211b7c9a8c5af738c09/64f7e2ad0e9fa5287b05dd4d_RYSE-story_0004.webp">
+            <div class="intro">
+                <p>Our customers proved that they remain strong and loyal during a global disruption. 2021 brings a new era of post-lockdown grit. The ryse family proved to be a staple of strength and progress during a time when our world needed it most. As we usher in this new era, we welcome new ways to get things done. With unprecedented growth we lead the charge forward rising to greatness.</p>
+                <p>Noel Deyzel joins the team as the face of RYSE supplements while taking on new social media platforms. Signing over 20 athletes our elite team grew by the day.
+                </p>
+                <p>In October we launched our second licensed pre-workout Loaded Pre Ring-Pop® in a cherry flavor. We didn’t stop there though, on Black Friday we released our highly sought after Godzilla Pre-Workout.
+                </p>
+                <p>RYSE wins the Stacked 3d Protein Wars for the first time in December beating out iconic brands to bring home the trophy.</p>
+            </div>
+
+        </div>
+
+        <div id="2020" class="tabcontent">
+            <img src="https://assets.website-files.com/5e29c211b7c9a8c5af738c09/64fa24020214ca5a0f1b6628_RYSE-story_0002%20copy.jpg">
+            <div class="intro">
+                <p>RYSE has expectations to experience exponential growth entering Europa for their domestic
+                    distribution partner. With the product line growing RYSE is expected to be in over 25 new countries
+                    by the end of the year.</p>
+                <p>We launched our highly anticipated non-carbonated RTD landing in gyms including Gold's Gym, X-Sport
+                    and many more.</p>
+                <p>Pump caps were born becoming a convenient on-the-go option for pre-workout and effective pump.</p>
+            </div>
+
+        </div>
+
+        <div id="2018" class="tabcontent">
+            <img
+                src="https://assets.website-files.com/5e29c211b7c9a8c5af738c09/64f7e2aea469747f0d2528d2_RYSE-story_0002%20(1)-p-800.webp">
+            <div class="intro">
+                <p>After only a few months in operations we grew into our second warehouse in Frisco, Texas. We launched
+                    2 flavors of our highly anticipated and top selling SKU protein known as RYSE Loaded Protein.</p>
+                <p>We expanded globally with massive distribution in Europe, Australia, South Africa and many domestic
+                    stores. We also landed our loaded protein into every GNC nationwide. The pink blast pre-workout was
+                    also added to the lineup under our core line of pre-workout.</p>
+            </div>
+
+
+        </div>
+
+        <div id="2017" class="tabcontent">
+            <img src="https://assets.website-files.com/5e29c211b7c9a8c5af738c09/6162444a53c93f63c032ec08_2017.jpg">
+            <div class="intro">
+                <p>The launch of RYSE was a few days before black friday in november 2017. Starting with only 2 flavors
+                    of Pre-Workout, BCAA + EAAs and our capsule products we took on a highly competitive industry.</p>
+            </div>
+
+        </div>
+
         
+
+        <div class="return-button">
+            <a href="sanpham.html" class="rt-product" id="gtsp">Sản phẩm của chúng tôi</a>
+        </div>
+
     </main>
 
     <footer>
         <ul>
             <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="signup.html">Đăng ký  </a></li>
-            <li><a href="">Giới thiệu</a></li>
+            <li><a href="signup.html">Đăng ký </a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
             <li><a href="sitemap.html">Sitemap</a></li>
             <li><a href="sanpham.html">Mua hàng</a></li>
-            
+
         </ul>
         <h3>Liên hệ</h3>
         <p>Phone: 0865197690 </p>
@@ -75,11 +187,12 @@
             <li class="Contact-foot"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a></li>
 
         </ul>
-        
+
         <hr>
         <p>Copyright © 2023 RYSE Up Sports Nutrition All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
     <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
