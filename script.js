@@ -20,7 +20,6 @@ function removeall() {
   localStorage.setItem('cartNumber', 0);
   displayCart();
   loadCart();
-  
 }
 
 //kiểm tra mã giảm giá
@@ -71,7 +70,7 @@ function decrease(name) {
   let cartItems = JSON.parse(localStorage.getItem("productInCart"));
   let cost = localStorage.getItem('total');
   let productNumbers = localStorage.getItem('cartNumber');
-  productNumbers = parseInt(productNumbers);
+  productNumbers = (productNumbers);
   Object.values(cartItems).forEach(item =>  {
   if(item.name == name && item.inCart > 0) {
       item.inCart -= 1;
@@ -118,11 +117,14 @@ function displayCart() {
               <a onclick="increase('${item.name}')"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
               <span>${item.inCart}</span>
               <a onclick="decrease('${item.name}')"><i class="fa fa-minus-circle" aria-hidden="true"></i></a>
+              
           </div>
           
           <div class="total">
               ${Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(item.inCart * item.price)}
+              
           </div>
+          <a onclick="eraseProduct('${item.name}')"><i class="fa fa-trash" aria-hidden="true"></i></a>
             
         `
   });
@@ -242,7 +244,7 @@ function cartNumber(product) {
 //lưu sản phẩm vào local sotrage
 function setItems(product) {
   let cartItems = localStorage.getItem('productInCart');
-  cartItems = JSON.parse(cartItems);  //JS to JSON
+  cartItems = JSON.parse(cartItems);  //JSON to JS
   if (cartItems != null) {
     if (cartItems[product.tag] == undefined) {
       cartItems = {
@@ -295,6 +297,19 @@ function myFunction() {
   }
 }
 
+function eraseProduct(name) {
+  let cartItems = JSON.parse(localStorage.getItem('productInCart'));
+  var cartItemsArr = Object.values(cartItems)
+  let cartNumber = parseInt(localStorage.getItem('cartNumber'));
+  let minusData = cartItemsArr.find(product => product.name == name);
+  let totalPrice = parseInt(localStorage.getItem('total'))
+  cartItemsArr = cartItemsArr.filter(product => product.name !== name)
+  localStorage.setItem('cartNumber', JSON.stringify(cartNumber - minusData.inCart))
+  localStorage.setItem('productInCart', JSON.stringify(cartItemsArr));
+  localStorage.setItem('total', JSON.stringify( totalPrice - (minusData.inCart*minusData.price) ) )
+  displayCart()
+  loadCart()
+}
 
 
 //tab giới thiệu
